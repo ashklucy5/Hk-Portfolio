@@ -21,11 +21,28 @@ software engineering, product thinking, SEO, analytics and growth.
 
 <br />
 
-[GitHub](https://github.com/ashklucy5)
-&nbsp;&nbsp;•&nbsp;&nbsp;
-[LinkedIn](https://www.linkedin.com/in/kumrul-hasan-ankur)
-&nbsp;&nbsp;•&nbsp;&nbsp;
-[Email](mailto:kumrul_hasan@hotmail.com)
+<p align="center">
+  <a href="https://github.com/ashklucy5">
+    <img
+      src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+      alt="GitHub"
+    />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/kumrul-hasan-ankur">
+    <img
+      src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
+      alt="LinkedIn"
+    />
+  </a>
+  &nbsp;
+  <a href="mailto:kumrul_hasan@hotmail.com">
+    <img
+      src="https://img.shields.io/badge/Email-B9222B?style=for-the-badge&logo=gmail&logoColor=white"
+      alt="Email"
+    />
+  </a>
+</p>
 
 </div>
 
@@ -958,9 +975,28 @@ same product.
 
 Shenzhen, China · Working globally
 
-[GitHub](https://github.com/ashklucy5)  
-[LinkedIn](https://www.linkedin.com/in/kumrul-hasan-ankur)  
-[Email](mailto:kumrul_hasan@hotmail.com)
+<p align="center">
+  <a href="https://github.com/ashklucy5">
+    <img
+      src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"
+      alt="GitHub"
+    />
+  </a>
+
+  <a href="https://www.linkedin.com/in/kumrul-hasan-ankur">
+    <img
+      src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"
+      alt="LinkedIn"
+    />
+  </a>
+
+  <a href="mailto:kumrul_hasan@hotmail.com">
+    <img
+      src="https://img.shields.io/badge/Email-B9222B?style=flat-square&logo=gmail&logoColor=white"
+      alt="Email"
+    />
+  </a>
+</p>
 
 ---
 
