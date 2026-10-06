@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06080D"/>
+      <stop offset="55%" stop-color="#0A0D13"/>
+      <stop offset="100%" stop-color="#020306"/>
+    </linearGradient>
+
+    <linearGradient id="metal" x1="80" y1="60" x2="355" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8F7F4"/>
+      <stop offset="18%" stop-color="#E6E4DF"/>
+      <stop offset="52%" stop-color="#F2F0EB"/>
+      <stop offset="78%" stop-color="#D4D2CD"/>
+      <stop offset="100%" stop-color="#FBFAF7"/>
+    </linearGradient>
+
+    <linearGradient id="metalEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#B8B5AE" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="redGlow" x1="250" y1="175" x2="420" y2="350" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#540000"/>
+      <stop offset="15%" stop-color="#980000"/>
+      <stop offset="50%" stop-color="#FF1616"/>
+      <stop offset="78%" stop-color="#C30000"/>
+      <stop offset="100%" stop-color="#410000"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="redBloom" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 0.2 0 0 0
+                0 0 0 0 0
+                0 0 0 0.9 0"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="512" height="512" rx="0" fill="url(#bg)"/>
+
+  <!-- subtle vignette -->
+  <rect width="512" height="512" fill="black" opacity="0.08"/>
+
+  <!-- red accent bloom behind the K diagonal -->
+  <path d="M281 176 L372 266 L418 356 L334 356 L252 272 Z" fill="#FF1010" opacity="0.42" filter="url(#redBloom)"/>
+
+  <!-- H -->
+  <g filter="url(#softShadow)">
+    <path d="M89 69H139V442H89V69Z" fill="url(#metal)"/>
+    <path d="M139 222H217V273H139V222Z" fill="url(#metal)"/>
+  </g>
+
+  <!-- center stem shared with K -->
+  <g filter="url(#softShadow)">
+    <path d="M224 41L273 62V458L224 423V41Z" fill="url(#metal)"/>
+  </g>
+
+  <!-- K top arm -->
+  <g filter="url(#softShadow)">
+    <path d="M327 69H427L341 154L288 127L327 69Z" fill="url(#metal)"/>
+  </g>
+
+  <!-- K lower arm -->
+  <g filter="url(#softShadow)">
+    <path d="M286 287L341 257L428 442H340L286 287Z" fill="url(#metal)"/>
+  </g>
+
+  <!-- K red diagonal inner accent -->
+  <g filter="url(#softShadow)">
+    <path d="M277 170L339 145L422 442H380L277 254V170Z" fill="url(#redGlow)"/>
+  </g>
+
+  <!-- bevel highlights -->
+  <path d="M93 73H135" stroke="url(#metalEdge)" stroke-width="2" opacity="0.65"/>
+  <path d="M227 44L270 63" stroke="url(#metalEdge)" stroke-width="2" opacity="0.7"/>
+  <path d="M330 72H422" stroke="url(#metalEdge)" stroke-width="2" opacity="0.6"/>
+  <path d="M289 289L339 261" stroke="url(#metalEdge)" stroke-width="2" opacity="0.45"/>
+
+  <!-- tiny texture lines -->
+  <g opacity="0.06" stroke="#FFFFFF">
+    <path d="M0 40H512"/>
+    <path d="M0 120H512"/>
+    <path d="M0 200H512"/>
+    <path d="M0 280H512"/>
+    <path d="M0 360H512"/>
+    <path d="M0 440H512"/>
+  </g>
+</svg>
