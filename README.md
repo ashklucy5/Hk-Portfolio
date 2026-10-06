@@ -150,42 +150,41 @@ on third-party font CDNs.
 
 ## Architecture
 
+The portfolio is organized around a small Nuxt composition root, reusable Vue sections, a server-side GitHub integration, and one shared visual system.
+
 ```mermaid
-flowchart TD
-    A[app/app.vue] --> B[FloatingNav]
-    A --> C[CinematicBackground]
-    A --> D[HeroSection]
-    A --> E[RoleSection]
-    A --> F[AboutSection]
-    A --> G[ProjectsSection]
-    A --> H[ExperienceSection]
-    A --> I[ContactSection]
+graph TD
+    A["🏠 app/app.vue"] --> B["🧭 FloatingNav"]
+    A --> C["🎬 CinematicBackground"]
+    A --> D["👋 HeroSection"]
+    A --> E["⚡ RoleSection"]
+    A --> F["👤 AboutSection"]
+    A --> G["💼 ProjectsSection"]
+    A --> H["🧠 ExperienceSection"]
+    A --> I["✉️ ContactSection"]
 
-    G --> J[/api/github-projects]
-    J --> K[GitHub REST API]
+    G --> J["🔌 GitHub Projects API"]
+    J --> K["🐙 GitHub REST API"]
 
-    L[app/data/profile.ts] --> D
+    L["📄 profile.ts"] --> D
     L --> E
     L --> F
     L --> H
     L --> I
 
-    M[main.css] --> B
+    M["🎨 main.css"] --> B
+    M --> C
     M --> D
     M --> E
     M --> F
     M --> G
     M --> H
     M --> I
-    M --> C
 ```
 
 The application deliberately keeps the page composition simple.
 
-`app/app.vue` acts as the composition root, while each major portfolio section
-is isolated into its own Vue component.
-
----
+`app/app.vue` acts as the composition root, while each major portfolio section is isolated into its own Vue component.
 
 ## Project structure
 
@@ -716,122 +715,9 @@ Person
 
 including professional identity, profile image and social profiles.
 
----
-
-# Environment variables
-
-Create a local `.env` file based on:
-
-```text
-.env.example
-```
-
-Example:
-
-```env
-NUXT_PUBLIC_GITHUB_USERNAME=ashklucy5
-
-# Optional.
-# Keep this server-side. Never expose it through a NUXT_PUBLIC_* variable.
-NUXT_GITHUB_TOKEN=
-
-# Set this when the final production domain is available.
-NUXT_PUBLIC_SITE_URL=
-```
-
-### Security
-
-Never commit:
-
-```text
-.env
-.env.local
-GitHub tokens
-API keys
-credentials
-```
-
 The repository `.gitignore` excludes local environment files.
 
----
 
-# Local development
-
-Clone the repository:
-
-```bash
-git clone https://github.com/ashklucy5/Hk-Portfolio.git
-```
-
-Move into the project:
-
-```bash
-cd Hk-Portfolio
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start development mode:
-
-```bash
-npm run dev
-```
-
-Nuxt will display the local development URL in the terminal.
-
----
-
-# Production build
-
-Create the production build:
-
-```bash
-npm run build
-```
-
-Preview it locally:
-
-```bash
-npm run preview
-```
-
-Production preview is particularly important for evaluating animation and
-scroll performance because development mode adds additional framework
-overhead.
-
----
-
-# Deployment
-
-The project is designed for deployment on **Vercel**.
-
-After importing the GitHub repository into Vercel, configure:
-
-```env
-NUXT_PUBLIC_GITHUB_USERNAME=ashklucy5
-```
-
-Optional server-side GitHub token:
-
-```env
-NUXT_GITHUB_TOKEN=your_token
-```
-
-Once the production domain is known, also configure:
-
-```env
-NUXT_PUBLIC_SITE_URL=https://your-domain.com
-```
-
-Do not use the GitHub token with the `NUXT_PUBLIC_` prefix.
-
-That would expose it to browser JavaScript.
-
----
 
 # Accessibility
 
